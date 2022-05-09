@@ -35,22 +35,22 @@ class TelFormatter(object):
         if len(tel) == 10:
             if re.match(self.AREA_CODE_REGEXP, tel):
                 f = re.findall(self.AREA_CODE_REGEXP, tel)
-                return tuple(tuple(*f[:2]))
+                return tuple(*f[:2])
             elif re.match(self.SPECIAL_CODE_10_REGEXP, tel):
                 f = re.findall(self.SPECIAL_CODE_10_REGEXP, tel)
-                return tuple(tuple(*f[:1]))
+                return tuple(*f[:1])
             elif re.match(self.CELLPHONE_CODE_10_REGEXP, tel):
                 f = re.findall(self.CELLPHONE_CODE_10_REGEXP, tel)
-                return tuple(tuple(*f[:2]))
+                return tuple(*f[:2])
             else:
                 raise Exception("Invalid telephone number")
         elif len(tel) == 11:
             if re.match(self.CELLPHONE_CODE_REGEXP, tel):
                 f = re.findall(self.CELLPHONE_CODE_REGEXP, tel)
-                return tuple(tuple(*f[:2]))
+                return tuple(*f[:2])
             elif re.match(self.SPECIAL_CODE_11_REGEXP, tel):
                 f = re.findall(self.SPECIAL_CODE_11_REGEXP, tel)
-                return tuple(tuple(*f[:1]))
+                return tuple(*f[:1])
             else:
                 raise Exception("Invalid telephone number")
         else:
