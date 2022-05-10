@@ -11,6 +11,7 @@ import jaconvV2
 def _get_re_freagment(file):
     with open(file) as f:
         lines = f.readlines()
+    lines.reverse()
     return "|".join(map(lambda s: s.split('\n')[0], lines))
 
 
