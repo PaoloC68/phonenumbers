@@ -18,7 +18,7 @@ def _get_re_freagment(file):
 AREA_CODES = _get_re_freagment(file='phonenumbers/data/area_codes.txt')
 SPECIAL_CODES_10 = _get_re_freagment(file='phonenumbers/data/special_codes_10.txt')
 SPECIAL_CODES_11 = _get_re_freagment(file='phonenumbers/data/special_codes_11.txt')
-CELLPHONE_CODES = _get_re_freagment(file='phonenumbers/data/special_codes_10.txt')
+CELLPHONE_CODES = _get_re_freagment(file='phonenumbers/data/cellphone_codes.txt')
 AREA_CODE_REGEXP = fr'\A({AREA_CODES})(\d{{1,4}})(\d{{4}})\Z'
 SPECIAL_CODE_10_REGEXP = fr'\A({SPECIAL_CODES_10})(\d{{6}})\Z'
 SPECIAL_CODE_11_REGEXP = fr'\A({SPECIAL_CODES_11})(\d{{7}})\Z'
